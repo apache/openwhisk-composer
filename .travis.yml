@@ -24,4 +24,5 @@ env:
   global:
     - IGNORE_CERTS=true
 before_script:
+  - ./travis/scancode.sh
   - ./travis/setup.sh
