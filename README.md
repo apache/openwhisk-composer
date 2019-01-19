@@ -182,9 +182,9 @@ example should be:
 }
 ```
 
-The intend is to use Redis only temporarily as the parallel composition is
-progressing. Keys are deleted after completion and, as an added safety, expire
-after twenty-four hours.
+The intent is to store intermediate results in Redis as the parallel composition
+is progressing. Redis entries are deleted after completion and, as an added
+safety, expire after twenty-four hours.
 
 # Disclaimer
 
