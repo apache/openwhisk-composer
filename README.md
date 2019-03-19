@@ -128,7 +128,7 @@ Datetime            Activation ID                    Kind     Start Duration   S
 2019-03-15 16:43:21 377cd080f0674e9cbcd080f0679e9c1d nodejs:6 warm  2ms        success guest/demo:0.0.1
 2019-03-15 16:43:20 5dceeccbdc7a4caf8eeccbdc7a9caf18 nodejs:6 cold  29ms       success guest/authenticate:0.0.1
 2019-03-15 16:43:19 66355a1f012d4ea2b55a1f012dcea264 nodejs:6 cold  104ms      success guest/demo:0.0.1
-2019-03-15 16:43:19 09ca3c7f8b68489c8a3c7f8b68b89cdc sequence warm  3.144s     success guest/demo:0.0.1 
+2019-03-15 16:43:19 09ca3c7f8b68489c8a3c7f8b68b89cdc sequence warm  3.144s     success guest/demo:0.0.1
 </pre>
 
 The entry with the earliest start time (`09ca3c7f8b68489c8a3c7f8b68b89cdc`)
