@@ -63,8 +63,13 @@ class Compositions {
     this.actions = wsk.actions
   }
 
-  deploy (composition, overwrite, debug, kind, timeout) {
-    const actions = (composition.actions || []).concat(conductor.generate(composition, debug, kind, timeout))
+  deploy (composition, overwrite, debug, kind, timeout, httpOptions) {
+    function addHttpOptions (action) {
+      // the openwhisk npm allows passthrough request-style options
+      return Object.assign({}, action, httpOptions)
+    }
+
+    const actions = (composition.actions || []).concat(conductor.generate(composition, debug, kind, timeout)).map(addHttpOptions)
     return actions.reduce((promise, action) => promise.then(() => overwrite && this.actions.delete(action).catch(() => { }))
       .then(() => this.actions.create(action)), Promise.resolve())
       .then(() => actions)
