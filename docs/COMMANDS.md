@@ -106,8 +106,8 @@ them. As a result, default parameters, limits, and annotations on preexisting
 actions are lost.
 
 The `--logsize` option specifies the maximum log size for the conductor action.
-The `--memory` option specifies the maximum memory for the conductor action. The
-`--timeout` option specifies the timeout for the conductor action.
+The `--memory` option specifies the maximum memory for the conductor action.
+The `--timeout` option specifies the timeout for the conductor action.
 
 The `--kind` option specifies the kind for the conductor action runtime. By
 default, the `nodejs:default` OpenWhisk runtime is used. The chosen runtime must
