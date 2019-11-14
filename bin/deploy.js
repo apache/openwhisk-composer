@@ -96,7 +96,7 @@ try {
   process.exit(400 - 256) // Bad Request
 }
 if (argv.basic && argv.bearer) {
-  throw Error('Must select either basic authentification of bearer token authentication')
+  throw Error('Must select either basic authentication of bearer token authentication')
 }
 if (typeof argv.timeout !== 'undefined' && typeof argv.timeout !== 'number') {
   throw Error('Timeout must be a number')
