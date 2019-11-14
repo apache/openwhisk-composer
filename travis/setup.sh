@@ -32,7 +32,7 @@ docker pull openwhisk/nodejs6action &
 
 # Clone OpenWhisk
 cd $ROOTDIR
-git clone --depth=1 https://github.com/apache/incubator-openwhisk.git openwhisk
+git clone --depth=1 https://github.com/apache/openwhisk.git openwhisk
 
 # Install Ansible
 pip install --user ansible==2.5.2
@@ -42,7 +42,7 @@ cp $SCRIPTDIR/runtimes.json $WHISKDIR/ansible/files
 
 # Deploy OpenWhisk
 cd $WHISKDIR/ansible
-ANSIBLE_CMD="ansible-playbook -i ${WHISKDIR}/ansible/environments/local -e docker_image_prefix=openwhisk"
+ANSIBLE_CMD="ansible-playbook -i ${WHISKDIR}/ansible/environments/local -e docker_image_prefix=openwhisk  -e docker_image_tag=nightly"
 $ANSIBLE_CMD setup.yml
 $ANSIBLE_CMD prereq.yml
 $ANSIBLE_CMD couchdb.yml
