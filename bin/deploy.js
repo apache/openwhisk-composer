@@ -73,7 +73,8 @@ try {
   for (let annotation of [...(argv.annotation || [])]) {
     const index = annotation.indexOf('=')
     if (index < 0) throw Error('Annotation syntax must be "KEY=VALUE"')
-    composition.annotations.push({ key: annotation.substring(0, index), value: annotation.substring(index + 1) })
+    const value = annotation.substring(index + 1);
+    composition.annotations.push({ key: annotation.substring(0, index), value: (value === "true") ? true : value })
   }
   if (typeof argv['annotation-file'] === 'string') argv['annotation-file'] = [argv['annotation-file']]
   for (let annotation of argv['annotation-file'] || []) {
