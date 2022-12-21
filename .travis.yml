@@ -17,7 +17,7 @@
 
 language: node_js
 node_js:
-  - 10
+  - 16
 services:
   - docker
 
@@ -35,4 +35,4 @@ env:
 before_install:
   - ./travis/scancode.sh
 before_script:
-  - ./travis/setup.sh
+#  - ./travis/setup.sh
