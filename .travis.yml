@@ -36,3 +36,5 @@ before_install:
   - ./travis/scancode.sh
 before_script:
 #  - ./travis/setup.sh
+script:
+   - echo "tests disabled"
